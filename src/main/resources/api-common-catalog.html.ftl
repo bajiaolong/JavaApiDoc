@@ -6,13 +6,17 @@
     <#list controllerNodeList as ctrolNode>
         <div class="panel">
             <div id="heading${ctrolNode?index}" data-parent="#accordion" class="catalog-title" data-toggle="collapse"
-                 aria-expanded="true" data-target="#collapse${ctrolNode?index}" aria-controls="collapse${ctrolNode?index}">
+                 aria-expanded="true" data-target="#collapse${ctrolNode?index}"
+                 aria-controls="collapse${ctrolNode?index}">
                 <i class="glyphicon glyphicon-align-justify"></i> ${ctrolNode.description}
             </div>
-            <div id="collapse${ctrolNode?index}" class="collapse <#if (controller?? && ctrolNode.docFileName == controller.docFileName) || ctrolNode?index == 0>in </#if>" aria-labelledby="heading${ctrolNode?index}">
+            <div id="collapse${ctrolNode?index}"
+                 class="collapse <#if (controller?? && ctrolNode.docFileName == controller.docFileName) || ctrolNode?index == 0>in </#if>"
+                 aria-labelledby="heading${ctrolNode?index}">
                 <#list ctrolNode.requestNodes as reqNode>
+                    <#assign myId = reqNode_index+1/>
                     <a class="catalog-item" href="${reqNode.codeFileUrl}">
-                        ${(reqNode.description)!''}
+                        ${myId}${(reqNode.description)!''}
                         <#if reqNode.changeFlag == 1>
                             <span class="label label-success">${i18n.getMessage('new')}</span>
                         <#elseif reqNode.changeFlag == 2>

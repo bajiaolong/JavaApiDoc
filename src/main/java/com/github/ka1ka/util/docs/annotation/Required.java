@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 必须
+ *
  *
  * @author 05697-LongLiHua
  * @version Id: Required.java, v 0.1 2021/1/20 17:42  LongLiHua Exp $

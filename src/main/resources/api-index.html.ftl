@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/google-code-prettify@1.0.5/bin/prettify.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.jpg" type="image/png" />
+    <link rel="icon" href="icon.jpg" type="image/png"/>
 </head>
 
 <body onload="PR.prettyPrint()">
@@ -23,7 +23,8 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${currentApiVersion}<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">${currentApiVersion}<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <#list apiVersionList as version>
                             <#if version != currentApiVersion>
@@ -51,11 +52,13 @@
             <div class="page-wrapper">
                 <div class="page-inner">
                     <div class="main-content">
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.jpcai.com%2Fupfiles%2Fphoto%2F200606%2F20060624180852263.jpg&refer=http%3A%2F%2Fwww.jpcai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613797784&t=a900caee57792eaa479f9a2c487884f1" width="200" height="200">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.jpcai.com%2Fupfiles%2Fphoto%2F200606%2F20060624180852263.jpg&refer=http%3A%2F%2Fwww.jpcai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613797784&t=a900caee57792eaa479f9a2c487884f1"
+                             width="200" height="200">
                         <h4 style="margin: 20px">${i18n.getMessage('doc.generate.tip')}</h4>
                         <div class="list-group" style="min-width: 200px">
                             <#list controllerNodeList as ctrolNode>
-                                <a href="${ctrolNode.docFileName}" class="list-group-item">${ctrolNode.description}</a>
+                                <a href="${ctrolNode.docFileName}" class="list-group-item"> ${ctrolNode
+                                    .description}</a>
                             </#list>
                         </div>
                     </div>
@@ -87,8 +90,8 @@
         {
             source: function (query, callback) {
                 var result = [];
-                for(var i = 0; i !== search_source_data.length; i++){
-                    if(search_source_data[i].name.indexOf(query) !== -1){
+                for (var i = 0; i !== search_source_data.length; i++) {
+                    if (search_source_data[i].name.indexOf(query) !== -1) {
                         result.push(search_source_data[i]);
                     }
                 }

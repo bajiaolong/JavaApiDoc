@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.ka1ka</groupId>
-    <artifactId>docs-maven-plugin</artifactId>
-    <version>1.0.1</version>
-    <name>docs-maven-plugin</name>
+    <artifactId>JavaApiDoc</artifactId>
+    <version>1.0.0</version>
+    <name>JavaApiDoc</name>
     <description>自动生成文档插件</description>
-    <packaging>maven-plugin</packaging>
-
+    <packaging>jar</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,9 +22,6 @@
     </properties>
 
     <dependencies>
-
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

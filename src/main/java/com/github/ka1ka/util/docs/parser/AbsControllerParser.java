@@ -17,7 +17,7 @@ import java.io.File;
 import java.util.List;
 
 /**
- * parse Controller Java the common part, get all request nodes
+ * parse controller Java the common part, get all request nodes
  *
  * @author yeguozhong util.github.com
  */

@@ -223,7 +223,7 @@ public class DocContext {
                     Utils.wideSearchFile(javaSrcDir, (f, name) -> f.getName().endsWith(".java") && ParseUtils.compilationUnit(f)
                             .getChildNodesByType(ClassOrInterfaceDeclaration.class)
                             .stream()
-                            .anyMatch(cd -> (cd.getAnnotationByName("Controller").isPresent()
+                            .anyMatch(cd -> (cd.getAnnotationByName("controller").isPresent()
                                     || cd.getAnnotationByName("RestController").isPresent())
                                     && !cd.getAnnotationByName(Ignore.class.getSimpleName()).isPresent())//
                             , result, false);
